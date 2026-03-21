@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* CARD */
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* TÍTULO */
+h1 {
+  margin-bottom: 20px;
+}
+
+/* FORM */
+form {
+  display: flex;
+  gap: 10px;
+}
+
+/* INPUT */
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* BOTÃO */
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #45a049;
+  transform: scale(1.05);
+}
+
+/* IMAGEM */
+img {
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* LOADING */
+#loading {
+  display: none;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* DOWNLOAD */
+#btnDownload {
+  margin-top: 10px;
+  width: 100%;
+}
