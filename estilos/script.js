@@ -6,7 +6,7 @@ const lista = document.getElementById("listaHistorico");
 const download = document.getElementById("download");
 
 // FUNÇÃO DAS SUGESTÕES
-function usarPrompt(texto) {
+window.usarPrompt = function(texto) {
   input.value = texto;
 }
 
