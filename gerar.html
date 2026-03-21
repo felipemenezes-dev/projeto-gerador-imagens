@@ -1,31 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Gerador de Imagens IA</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
 <body>
 
 <div class="container">
-  <h1>Gerador de Imagens IA</h1>
 
-  <form id="form">
-    <input type="text" id="prompt" placeholder="Descreva sua imagem..." required>
+  <h1>🎨 Gerar Imagem</h1>
+
+  <p>Descreva a imagem que você deseja criar:</p>
+
+  <form>
+    <input type="text" placeholder="Ex: dragão voando no céu" required>
     <button type="submit">Gerar</button>
   </form>
 
-  <div id="loading">Gerando imagem...</div>
+  <h3>Resultado</h3>
+  <img src="https://picsum.photos/400" alt="Imagem gerada">
 
-  <img id="imagem" src="" alt="">
+  <a class="voltar" href="index.html">⬅ Voltar</a>
 
-  <a id="download" download>
-    <button id="btnDownload">Baixar imagem</button>
-  </a>
 </div>
 
-<script src="script.js"></script>
-
 </body>
-</html>
