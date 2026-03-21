@@ -1,112 +1,43 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  color: white;
+/* SUGESTÕES */
+.sugestoes {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  flex-wrap: wrap;
 }
 
-/* HEADER */
-header {
-  text-align: center;
-  padding: 20px;
+.sugestoes button {
+  font-size: 12px;
+  padding: 5px;
 }
 
-/* CONTAINER CENTRAL */
-.container {
-  max-width: 800px;
-  margin: 30px auto;
-  background: white;
-  color: black;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-/* TITULOS */
-h1, h2, h3 {
-  text-align: center;
-}
-
-/* NAV */
-nav ul {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-}
-
-nav li {
-  margin: 10px 0;
-}
-
-/* LINKS */
-a {
-  color: #4CAF50;
-  text-decoration: none;
+/* LOADING */
+#loading {
+  display: none;
+  margin-top: 10px;
   font-weight: bold;
 }
 
-a:hover {
-  text-decoration: underline;
+/* HISTÓRICO */
+.historico {
+  margin-top: 20px;
 }
 
-/* BOTÕES */
-button {
-  background: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 8px;
+#listaHistorico {
+  list-style: none;
+  padding: 0;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+#listaHistorico li {
+  background: #eee;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-button:hover {
-  background: #45a049;
-}
-
-/* INPUT */
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-/* FORM */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* TABELA */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-th {
-  background: #4CAF50;
-  color: white;
-  padding: 10px;
-}
-
-td {
-  padding: 10px;
-  border: 1px solid #ccc;
-  text-align: center;
-}
-
-/* IMAGENS */
-img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-/* BOTÃO VOLTAR */
-.voltar {
-  display: block;
-  text-align: center;
-  margin-top: 20px;
+#listaHistorico li:hover {
+  background: #ddd;
 }
