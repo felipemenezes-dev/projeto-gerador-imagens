@@ -1,29 +1,15 @@
-const form = document.getElementById("form");
-const input = document.getElementById("prompt");
-const img = document.getElementById("imagem");
-const loading = document.getElementById("loading");
-const lista = document.getElementById("listaHistorico");
-const download = document.getElementById("download");
+const form = document.querySelector("form");
+const input = document.getElementById("descricao");
+const img = document.querySelector("img");
 
-// sugestões
-function usarPrompt(texto) {
-  input.value = texto;
-}
+// criar loading
+const loading = document.createElement("p");
+loading.textContent = "Gerando imagem...";
+loading.style.display = "none";
+form.appendChild(loading);
 
-// histórico
-function adicionarHistorico(prompt) {
-  const li = document.createElement("li");
-  li.textContent = prompt;
-
-  li.onclick = () => {
-    input.value = prompt;
-  };
-
-  lista.prepend(li);
-}
-
-// gerar imagem
-form.addEventListener("submit", async (e) => {
+// evento do formulário
+form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const prompt = input.value;
@@ -31,15 +17,10 @@ form.addEventListener("submit", async (e) => {
   loading.style.display = "block";
   img.src = "";
 
-  // simulação IA
-  const imageUrl = `https://picsum.photos/400?random=${Math.random()}`;
+  const imageUrl = `https://picsum.photos/seed/${encodeURIComponent(prompt)}/400`;
 
   setTimeout(() => {
     img.src = imageUrl;
-    download.href = imageUrl;
-
-    adicionarHistorico(prompt);
-
     loading.style.display = "none";
-  }, 1000);
+  }, 800);
 });
