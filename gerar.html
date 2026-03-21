@@ -2,20 +2,37 @@
 
 <div class="container">
 
-  <h1>🎨 Gerar Imagem</h1>
+  <h1> Gerador de Imagens IA</h1>
 
-  <p>Descreva a imagem que você deseja criar:</p>
-
-  <form>
-    <input type="text" placeholder="Ex: dragão voando no céu" required>
+  <form id="form">
+    <input type="text" id="prompt" placeholder="Descreva sua imagem..." required>
     <button type="submit">Gerar</button>
   </form>
 
-  <h3>Resultado</h3>
-  <img src="https://picsum.photos/400" alt="Imagem gerada">
+  <!-- sugestões -->
+  <div class="sugestoes">
+    <button onclick="usarPrompt('homem aranha realista')">🕷️ Spider-Man</button>
+    <button onclick="usarPrompt('carro futurista neon')">🚗 Cyberpunk</button>
+    <button onclick="usarPrompt('dragão voando')">🐉 Dragão</button>
+  </div>
+
+  <div id="loading">⏳ Gerando imagem...</div>
+
+  <img id="imagem" src="">
+
+  <a id="download" download>
+    <button>⬇ Baixar</button>
+  </a>
+
+  <div class="historico">
+    <h3>Histórico</h3>
+    <ul id="listaHistorico"></ul>
+  </div>
 
   <a class="voltar" href="index.html">⬅ Voltar</a>
 
 </div>
+
+<script src="script.js"></script>
 
 </body>
