@@ -1,3 +1,7 @@
+window.usarPrompt = function(texto) {
+  document.getElementById("prompt").value = texto;
+};
+
 const form = document.getElementById("form");
 const input = document.getElementById("prompt");
 const img = document.getElementById("imagem");
@@ -5,25 +9,7 @@ const loading = document.getElementById("loading");
 const lista = document.getElementById("listaHistorico");
 const download = document.getElementById("download");
 
-// FUNÇÃO DAS SUGESTÕES
-window.usarPrompt = function(texto) {
-  input.value = texto;
-}
-
-// HISTÓRICO
-function adicionarHistorico(prompt) {
-  const li = document.createElement("li");
-  li.textContent = prompt;
-
-  li.onclick = () => {
-    input.value = prompt;
-  };
-
-  lista.prepend(li);
-}
-
-// GERAR IMAGEM
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", function(e) {
   e.preventDefault();
 
   const prompt = input.value;
@@ -31,14 +17,18 @@ form.addEventListener("submit", (e) => {
   loading.style.display = "block";
   img.src = "";
 
-  // gera imagem baseada no texto
-  const imageUrl = `https://picsum.photos/seed/${encodeURIComponent(prompt)}/400`;
+  const imageUrl = "https://picsum.photos/400?random=" + Math.random();
 
-  setTimeout(() => {
+  setTimeout(function() {
     img.src = imageUrl;
     download.href = imageUrl;
 
-    adicionarHistorico(prompt);
+    const li = document.createElement("li");
+    li.textContent = prompt;
+    li.onclick = function() {
+      input.value = prompt;
+    };
+    lista.prepend(li);
 
     loading.style.display = "none";
   }, 800);
