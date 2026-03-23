@@ -6,39 +6,19 @@
 
   <style>
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      font-family: Arial;
+      text-align: center;
+      background: #222;
+      color: white;
     }
 
     .container {
-      background: white;
-      color: black;
-      padding: 30px;
-      border-radius: 15px;
-      width: 350px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    }
-
-    h1 {
-      margin-bottom: 20px;
-    }
-
-    form {
-      display: flex;
-      gap: 10px;
+      margin-top: 50px;
     }
 
     input {
-      flex: 1;
       padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
+      width: 250px;
     }
 
     button {
@@ -46,26 +26,12 @@
       background: #4CAF50;
       color: white;
       border: none;
-      border-radius: 8px;
       cursor: pointer;
-      transition: 0.2s;
-    }
-
-    button:hover {
-      background: #45a049;
-      transform: scale(1.05);
     }
 
     img {
       margin-top: 20px;
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    #loading {
-      margin-top: 10px;
-      font-weight: bold;
-      display: none;
+      width: 400px;
     }
   </style>
 </head>
@@ -74,14 +40,14 @@
 
 <div class="container">
 
-  <h1>🎨 Gerador de Imagens</h1>
+  <h1>Gerador de Imagens</h1>
 
   <form id="form">
-    <input type="text" id="prompt" placeholder="Descreva sua imagem..." required>
+    <input type="text" id="prompt" placeholder="Digite algo..." required>
     <button type="submit">Gerar</button>
   </form>
 
-  <p id="loading">⏳ Gerando imagem...</p>
+  <p id="loading" style="display:none;">Gerando imagem...</p>
 
   <img id="imagem" src="">
 
@@ -104,7 +70,7 @@ form.addEventListener("submit", function(e) {
   setTimeout(function() {
     img.src = imageUrl;
     loading.style.display = "none";
-  }, 800);
+  }, 1000);
 });
 </script>
 
