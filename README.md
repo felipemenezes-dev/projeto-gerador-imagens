@@ -14,16 +14,16 @@ O objetivo é demonstrar o uso de tecnologias web (HTML, CSS e JavaScript) na cr
 
 ## Funcionalidades
 
-- 🎨 Geração de imagens a partir de texto  
-- ⚡ Interface simples e intuitiva  
-- 📜 Histórico de prompts utilizados  
-- ⏳ Feedback de carregamento (loading)  
-- ⬇️ Download da imagem gerada  
-- 💡 Sugestões de prompts prontos  
+-  Geração de imagens a partir de texto  
+-  Interface simples e intuitiva  
+-  Histórico de prompts utilizados  
+-  Feedback de carregamento (loading)  
+-  Download da imagem gerada  
+-  Sugestões de prompts prontos  
 
 ---
 
-## 🛠 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - HTML5  
 - CSS3  
@@ -32,9 +32,9 @@ O objetivo é demonstrar o uso de tecnologias web (HTML, CSS e JavaScript) na cr
 
 ---
 
-## 🌐 Acesse o Projeto
+## Acesse o Projeto
 
-👉 https://felipemenezes-dev.github.io/projeto-gerador-imagens/
+ https://felipemenezes-dev.github.io/projeto-gerador-imagens/
 
 ---
 
